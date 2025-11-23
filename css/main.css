@@ -222,19 +222,17 @@ h1 {
 /* 프로필 설정 */
 
 .self-introduce {
-
+    min-height: 650px;
     position: relative;
-    height: 1040px;
 
 }
 
 .profile-bg {
     position: absolute;
-    top: -100px;
-    left: 580px;
-    width: 1200px;
-    height: 2216px;
-   margin: 0 auto;
+    top: -200px;
+    left: 0;
+    min-width: 1512px;
+    height: 2400px;
 }
 
 
@@ -244,7 +242,7 @@ h1 {
 }
 
 .profile {
-    width: 45.71%;
+    width: 600px;
     margin: 0 auto;
     padding: 3.75%;
     border: 1px solid #99090A;
@@ -321,8 +319,7 @@ h1 {
 
 /* 타임라인 */
 .timeline {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
     position: relative;
 
 }
@@ -341,18 +338,20 @@ h1 {
 }
 
 .timeline-item {
+    margin-top: 160px;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 120px;
     position: relative;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s ease-out;
-    top: -187px;
+    top: 0;
     left: 0;
 }
 
-.timeline-item.uxui {}
+.timeline-item.books {
+    margin-top: 130px;
+}
 
 .timeline-item.show {
     opacity: 1;
@@ -374,9 +373,6 @@ h1 {
     height: 2rem;
     border-radius: 50%;
     background-color: #990909;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -722,7 +718,7 @@ h1 {
 }
 
 .project .project-card[active] .project-card__tags {
-    
+
     margin-top: 15px;
 }
 
@@ -736,7 +732,6 @@ h1 {
 .project-card__tags span {
     display: inline-block;
     height: auto;
-    color: #ffffffe0;
     font-size: 12px;
     font-weight: 500;
     padding: 6px;
@@ -744,17 +739,18 @@ h1 {
     border-radius: 20px;
     margin-bottom: 12px;
     text-align: center;
+    color: #000;
 }
 
 .project-card__tags span.web {
-    background-color: #355DFA;
+    background-color: #355cfa23;
     margin-right: 6px;
 
 }
 
 .project-card__tags span.app {
 
-    background-color: #990909;
+    background-color: #99090930;
 }
 
 
@@ -946,9 +942,7 @@ h1 {
         display: none;
     }
 
-    .profile-bg {
-        left: 0;
-    }
+    .profile-bg {}
 
     .hero .text {
         font-size: 9vw;
@@ -983,7 +977,13 @@ h1 {
 .imitation p.project-card__contribution {
     color: #58585860;
 }
+.imitation span.web {
+    background-color: #fff;
 
+}
+.imitation span {
+    background-color: #fff;
+} 
 .thumb-section .tag {
     display: flex;
     margin: auto;
@@ -1330,7 +1330,6 @@ i.visible {
     }
 
     .profile {
-        width: 40%;
         justify-content: center;
     }
 
@@ -1359,65 +1358,66 @@ i.visible {
     }
 }
 
-    @media screen and (max-width: 700px) {
-        caption {
+@media screen and (max-width: 700px) {
+    caption {
 
-            padding: 12px;
-        }
-
-        caption img {
-            height: 100%;
-        }
-
-        h1 {
-            font-size: 5vw;
-            margin-top: 7rem;
-            flex-direction: column;
-        }
-
-        h1 span {
-            display: block;
-            font-size: 1.4rem;
-        }
-
-        .profile {
-            background-color: #ffffffcb;
-        }
-
-        .profile .photo {
-            width: 130px;
-            height: 150px;
-        }
-
-        .profile .text .job {
-            display: block;
-            margin-top: 4px;
-        }
-
-        .profile .text {
-            font-size: 14px;
-        }
-
-        .model-images {
-            width: 80%;
-        }
+        padding: 12px;
     }
 
-    @media screen and (max-width: 400px) {
-        h1 {
-            font-size: 1.4rem;
-        }
-
-        .profile {
-            width: 100%;
-
-        }
-
-        h1 span {
-            font-size: 4rem;
-        }
-
-        .design {
-            width: calc(100% - 20px);
-        }
+    caption img {
+        height: 100%;
     }
+
+    h1 {
+        font-size: 5vw;
+        margin-top: 7rem;
+        flex-direction: column;
+    }
+
+    h1 span {
+        display: block;
+        font-size: 1.4rem;
+    }
+
+    .profile {
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .profile .photo {
+        width: 130px;
+        height: 150px;
+    }
+
+    .profile .text .job {
+        display: block;
+        margin-top: 4px;
+    }
+
+    .profile .text {
+        font-size: 14px;
+    }
+
+    .model-images {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .profile {
+        width: 100%;
+
+    }
+
+    h1 span {
+        font-size: 4rem;
+    }
+
+    .design {
+        width: calc(100% - 20px);
+    }
+}
